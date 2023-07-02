@@ -23,7 +23,7 @@ public class UserRepository {
     }
 
     public String save(User user) {
-        jdbcTemplate.update("insert into \"User\" (\"ID\", \"Name\", \"Surname\", \"Description\") values (your_sequence_name.nextval, ?, ?, ?)",
+        jdbcTemplate.update("insert into \"User\" (\"ID\", \"Name\", \"Surname\", \"Description\") values (user_sequence.nextval, ?, ?, ?)",
                 user.getName(), user.getSurname(), user.getDescription());
 
         return "Udało się dodać użytkownika";
