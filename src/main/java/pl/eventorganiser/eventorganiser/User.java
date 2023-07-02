@@ -8,19 +8,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-    private String Name;
-    private String Surname;
-    private String Description;
+    private String name;
+    private String surname;
+    private String description;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getSurname() {
-        return Surname;
+        return surname;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 }
