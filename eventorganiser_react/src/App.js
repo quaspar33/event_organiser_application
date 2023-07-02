@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import MenuBar from './MenuBar.js';
-import LoginWindow from "./LoginWindow";
+import MenuBar from './componets/MenuBar.js';
+import LoginWindow from "./componets/LoginWindow";
 
 function App() {
     return (
