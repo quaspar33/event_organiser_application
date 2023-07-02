@@ -25,11 +25,11 @@ public class UserController {
 
     @PostMapping("")
     public String addUser(@RequestBody User user) {
-        return userRepository.save(user);
+        return userRepository.addUser(user);
     }
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
-        return userRepository.delete(id);
+        return userRepository.deleteUser(id);
     }
 }

@@ -22,7 +22,7 @@ public class UserRepository {
                 BeanPropertyRowMapper.newInstance(User.class));
     }
 
-    public String save(User user) {
+    public String addUser(User user) {
         jdbcTemplate.update("insert into \"User\" (\"ID\", \"Name\", \"Surname\", \"Description\") values (user_sequence.nextval, ?, ?, ?)",
                 user.getName(), user.getSurname(), user.getDescription());
 
@@ -34,7 +34,7 @@ public class UserRepository {
                 BeanPropertyRowMapper.newInstance(User.class), id);
     }
 
-    public String delete(int id) {
+    public String deleteUser(int id) {
         jdbcTemplate.update("delete from \"User\" where id = ?", id);
 
         return "Udało się usunąć użytkownika";
