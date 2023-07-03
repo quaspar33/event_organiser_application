@@ -18,6 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
+Zrzut ekranu 2023-07-3 o 16.33.26.png
+Zrzut ekranu 2023-07-3 o 16.33.46.png
 
 
 ### NetBeans ###
@@ -33,4 +35,3 @@ build/
 ### VS Code ###
 .vscode/
 src/main/resources/application.properties
-*.png
