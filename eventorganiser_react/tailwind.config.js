@@ -1,14 +1,10 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+// eslint-disable-next-line no-undef
+module.exports = {
   mode: "jit",
-  darkMode: true,
-  purge: [
-      "./src/**/*.{js,ts,jsx,tsx}",
-      "./index.html"
-  ],
+  darkMode: "media",
   content: [
-    "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./index.html"
   ],
   theme: {
     extend: {
@@ -28,9 +24,9 @@ export default {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
-      content: {
+      backgroundImage: {
         waves: "url('./assets/Wave.svg')",
-        circles: "url('./assets/IrregularCircle.svg)",
+        circles: "url('./assets/IrregularCircle.svg')",
         lecture1: "url('./assets/Lecture_1.svg')",
         lecture2: "url('./assets/Lecture_2.svg')",
         lecture3: "url('./assets/Lecture_3.svg')",
@@ -45,4 +41,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

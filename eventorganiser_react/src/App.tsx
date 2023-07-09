@@ -1,7 +1,8 @@
+import MenuBar from "./components/MenuBar.tsx";
 function App() {
     return (
-        <div className="flex">
-            hello world
+        <div className="app bg-color-8">
+            <MenuBar/>
         </div>
     )
 }
