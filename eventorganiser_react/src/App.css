@@ -1,41 +1,24 @@
-body {
-  margin: 0;
-  padding: 0;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-#app {
-  background-color: #282c34;
-  min-height: 100vh;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
-
-.square {
-  width: 400px;
-  height: 400px;
-  background-color: #333;
-  margin: 0 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rotating-image {
-  max-width: 650px;
-  max-height: 650px;
-  animation: rotate 10s infinite linear;
-}
-
-@keyframes rotate {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -44,65 +27,16 @@ body {
   }
 }
 
-.navbar {
-  width: 800px;
-  height: 80px;
-  background-color: #333333;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 100px;
-  padding-right: 100px;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.navbar__container {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 50px;
+.card {
+  padding: 2em;
 }
 
-#navbar__logo {
-  background-color: #02024b;
-  background-image: linear-gradient(to top, #dedee7 0%, #60ccef 100%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-}
-
-.navbar__menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.navbar__item {
-  height: 80px;
-}
-
-.navbar__links {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 125px;
-  text-decoration: none;
-  height: 100%;
-  transition: all 0.3s ease;
-}
-
-.navbar__links:hover {
-  color: #60ccef;
-  transition: all 0.3s ease;
+.read-the-docs {
+  color: #888;
 }
