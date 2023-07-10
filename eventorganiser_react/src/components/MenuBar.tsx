@@ -12,23 +12,23 @@ const MenuBar: React.FC = () => {
 
     return (
         <div className="relative">
-            <div className="flex items-center h-20 px-4 bg-light-blue">
+            <div className="flex items-center h-20 px-4 bg-color-3">
                 {open ? (
                     <button
                         className="p-2 rounded-md hover:bg-gray-200 focus:outline-none transition duration-300 ease-in-out transform hover:scale-110"
                         onClick={handleClick}
                     >
-                        <ArrowLeftIcon className="h-8 w-8 text-deep-blue" />
+                        <ArrowLeftIcon className="h-8 w-8 text-color-10" />
                     </button>
                 ) : (
                     <button
                         className="p-2 rounded-md hover:bg-gray-200 focus:outline-none transition duration-300 ease-in-out transform hover:scale-110"
                         onClick={handleClick}
-                    > 
-                        <Bars3Icon className="h-8 w-8 text-deep-blue" />
+                    >
+                        <Bars3Icon className="h-8 w-8 text-color-10" />
                     </button>
                 )}
-                <span className="ml-7 text-deep-blue font-dmsans font-bold text-3xl">
+                <span className="ml-7 text-color-10 font-dmsans font-bold text-4xl">
           Event Organiser
         </span>
             </div>
@@ -39,12 +39,12 @@ const MenuBar: React.FC = () => {
             >
                 <div className="py-1 flex flex-col items-left" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
                     <a href="#"
-                       className="block px-4 py-2 rounded-md text-2xl text-deep-blue hover:bg-light-blue transition duration-300 ease-in-out transform hover:scale-95"
+                       className="block px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95"
                        role="menuitem">
                         Log In
                     </a>
                     <a href="#"
-                       className="block px-4 py-2 rounded-md text-2xl text-deep-blue hover:bg-light-blue transition duration-300 ease-in-out transform hover:scale-95"
+                       className="block px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95"
                        role="menuitem">
                         Register
                     </a>

@@ -4,7 +4,7 @@ import Wave from "./assets/Wave.svg";
 
 function App() {
     return (
-        <div className="app bg-app-background">
+        <div className="app bg-color-8">
             <MenuBar />
             {/*<div*/}
             {/*    className="w-64 h-64 absolute top-0 left-0 bg-cover bg-center"*/}
