@@ -1,6 +1,5 @@
 import { Bars3Icon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
-
 import Vite from "../assets/vite.svg";
 import ReactImg from "../assets/react.svg";
 import TypeScript from "../assets/typescript.svg";
@@ -39,10 +38,14 @@ const MenuBar: React.FC = () => {
                 }`}
             >
                 <div className="py-1 flex flex-col items-left" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
-                    <a href="#" className="block px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95" role="menuitem">
+                    <a href="#"
+                       className="block px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95"
+                       role="menuitem">
                         Log In
                     </a>
-                    <a href="#" className="block px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95" role="menuitem">
+                    <a href="#"
+                       className="block px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95"
+                       role="menuitem">
                         Register
                     </a>
                     <div className="flex flex-col items-center mt-10">
