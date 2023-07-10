@@ -10,6 +10,22 @@ const MenuBar: React.FC = () => {
         setOpen(!open);
     };
 
+    const handleTechnologyClick = (technology: string) => {
+        switch (technology) {
+            case 'React':
+                window.open("https://pl.react.dev/blog/2023/03/16/introducing-react-dev");
+                break;
+            case 'TypeScript':
+                window.open("https://www.typescriptlang.org/");
+                break;
+            case 'Vite':
+                window.open("https://vitejs.dev/");
+                break;
+            default:
+                break;
+        }
+    };
+
     return (
         <div className="relative">
             <div className="flex items-center h-20 px-4 bg-color-3">
@@ -37,25 +53,45 @@ const MenuBar: React.FC = () => {
                     open ? "translate-x-0" : "-translate-x-full"
                 }`}
             >
-                <div className="py-1 flex flex-col items-left" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
-                    <a href="#"
-                       className="px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
+                <div
+                    className="py-1 flex flex-col items-left"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="menu-button"
+                >
+                    <a
+                        href="#"
+                        className="px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center"
+                    >
                         <span>Log In</span>
-                        <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10"/>
+                        <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10" />
                     </a>
 
-                    <a href="#"
-                       className="px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
+                    <a
+                        href="#"
+                        className="px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center"
+                    >
                         <span>Register</span>
-                        <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10"/>
+                        <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10" />
                     </a>
                     <div className="flex flex-col items-center mt-10">
-                        <div className="w-36 h-32 mb-16 relative bg-cover bg-center" style={{ backgroundImage: `url(${ReactImg})` }}></div>
-                        <div className="w-32 h-32 mb-16 relative bg-cover bg-center" style={{ backgroundImage: `url(${TypeScript})` }}></div>
-                        <div className="w-32 h-32 relative bg-cover bg-center" style={{ backgroundImage: `url(${Vite})` }}></div>
+                        <div
+                            className="w-36 h-32 rounded-md mb-16 relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-110"
+                            style={{ backgroundImage: `url(${ReactImg})` }}
+                            onClick={() => handleTechnologyClick("React")}
+                        ></div>
+                        <div
+                            className="w-32 h-32 mb-16 rounded-md relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-110"
+                            style={{ backgroundImage: `url(${TypeScript})` }}
+                            onClick={() => handleTechnologyClick("TypeScript")}
+                        ></div>
+                        <div
+                            className="w-32 h-32 rounded-md relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-110"
+                            style={{ backgroundImage: `url(${Vite})` }}
+                            onClick={() => handleTechnologyClick("Vite")}
+                        ></div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
