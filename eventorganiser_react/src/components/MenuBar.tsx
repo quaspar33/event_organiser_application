@@ -60,7 +60,6 @@ const MenuBar: React.FC = () => {
                     aria-labelledby="menu-button"
                 >
                     <a
-                        href="#"
                         className="px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center"
                     >
                         <span>Log In</span>
@@ -68,7 +67,6 @@ const MenuBar: React.FC = () => {
                     </a>
 
                     <a
-                        href="#"
                         className="px-4 py-2 rounded-md text-2xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center"
                     >
                         <span>Register</span>
