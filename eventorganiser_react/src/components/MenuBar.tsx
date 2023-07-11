@@ -49,15 +49,17 @@ const MenuBar: React.FC = () => {
                             <Bars3Icon className="h-10 w-10 text-color-10" />
                         </button>
                     )}
-                    <span className="ml-7 text-color-10 font-dmsans font-bold text-5xl"> Event Organiser </span>
+                    <a href={"http://localhost:5173/"} className="ml-7 text-color-10 font-dmsans font-bold text-5xl">
+                        Event Organiser
+                    </a>
                 </div>
                 <div className={`absolute top-20 left-0 h-screen w-60 bg-gray-200 transition-all duration-500 ${open ? "translate-x-0" : "-translate-x-full"}`}>
                     <div className="py-1 flex flex-col items-left" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
-                        <a className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
+                        <a href={"/login"} className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
                             <span>Log In</span>
                             <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10" />
                         </a>
-                        <a className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
+                        <a href={"/register"} className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
                             <span>Register</span>
                             <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10" />
                         </a>
