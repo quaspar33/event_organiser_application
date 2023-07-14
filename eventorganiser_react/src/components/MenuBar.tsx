@@ -1,10 +1,10 @@
 import { Bars3Icon, ArrowLeftIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
-import React, { useState } from "react";
+import { useState } from "react";
 import Vite from "../assets/vite.svg";
 import ReactImg from "../assets/react.svg";
 import TypeScript from "../assets/typescript.svg";
 
-const MenuBar: React.FC = () => {
+function MenuBar() {
     const [open, setOpen] = useState(false);
     const [temporaryOverflowHidden, setTemporaryOverflowHidden] = useState(false);
 
@@ -40,7 +40,7 @@ const MenuBar: React.FC = () => {
         <div className={`min-h-screen ${temporaryOverflowHidden ? "" : "overflow-hidden"}`} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
             <div className="relative">
                 <div className="flex items-center h-20 px-4 bg-color-3">
-                    {open ? (
+                    { open ? (
                         <button className="p-2 rounded-md hover:bg-gray-200 focus:outline-none transition duration-300 ease-in-out transform hover:scale-110" onClick={handleClick}>
                             <ArrowLeftIcon className="h-10 w-10 text-color-10" />
                         </button>
@@ -85,6 +85,6 @@ const MenuBar: React.FC = () => {
             </div>
         </div>
     );
-};
+}
 
 export default MenuBar;
