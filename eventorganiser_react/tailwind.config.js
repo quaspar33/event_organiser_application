@@ -20,10 +20,6 @@ module.exports = {
         "color-9": "#42389D",
         "color-10": "#362F78"
       },
-      fontFamily: {
-        dmsans: ["DM Sans", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
-      },
       backgroundImage: {
         waves: "url('./assets/Wave.svg')",
         circles: "url('./assets/IrregularCircle.svg')",
@@ -31,13 +27,8 @@ module.exports = {
         lecture2: "url('./assets/Lecture_2.svg')",
         lecture3: "url('./assets/Lecture_3.svg')",
         lecture4: "url('./assets/Lecture_4.svg')",
-        lecture5: "url('./assets/Lecture_5.svg')",
+        lecture5: "url('./assets/Lecture_1.svg')",
       },
-    },
-    screens: {
-      xs: "480px",
-      sm: "768px",
-      md: "1060px",
     },
   },
   plugins: [],
