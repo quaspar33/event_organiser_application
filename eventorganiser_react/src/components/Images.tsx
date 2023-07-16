@@ -5,18 +5,12 @@ import Lecture3 from "../assets/Lecture_3.svg";
 const ImageSlider = [
     {
         url: Lecture1,
-        title: "Picture 1",
-        body: "coś tam coś tam"
     },
     {
         url: Lecture2,
-        title: "Picture 2",
-        body: "coś tam coś tam"
     },
     {
         url: Lecture3,
-        title: "Picture 3",
-        body: "coś tam coś tam"
     }
 ];
 
