@@ -40,9 +40,9 @@ function BackgroundSlider() {
                     position: "absolute", top: 1.5, right: 1.5
                 }}
             >
-                <h1 className="text-color-3 text-7xl font-bold mb-12 relative z-10 whitespace-nowrap">{TextSlider[index].title}</h1>
-                <p className="text-color-3 text-4xl mb-6 relative z-10">{TextSlider[index].body}</p>
-                <div className="flex text-color-3 justify-center mt-10">
+                <h1 className="text-7xl font-bold mb-12 relative z-10 whitespace-nowrap">{TextSlider[index].title}</h1>
+                <p className="text-4xl mb-6 relative z-10">{TextSlider[index].body}</p>
+                <div className="flex justify-center mt-10">
                     {ImageSlider.map((_, i) => (
                         <StopIcon
                             key={i}
