@@ -6,18 +6,9 @@ import TypeScript from "../assets/typescript.svg";
 
 function MenuBar() {
     const [open, setOpen] = useState(false);
-    const [temporaryOverflowHidden, setTemporaryOverflowHidden] = useState(false);
 
     const handleClick = () => {
         setOpen(!open);
-    };
-
-    const handleMouseDown = () => {
-        setTemporaryOverflowHidden(true);
-    };
-
-    const handleMouseUp = () => {
-        setTemporaryOverflowHidden(false);
     };
 
     const handleTechnologyClick = (technology: string) => {
@@ -37,7 +28,7 @@ function MenuBar() {
     };
 
     return (
-        <div className={`min-h-screen ${temporaryOverflowHidden ? "" : "overflow-hidden"}`} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp}>
+        <div className="min-h-screen overflow-hidden">
             <div className="relative">
                 <div className="flex items-center h-20 px-4 bg-color-3">
                     { open ? (
