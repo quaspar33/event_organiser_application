@@ -49,8 +49,17 @@ function MenuBar() {
                             <Bars3Icon className="h-10 w-10 text-color-10" />
                         </button>
                     )}
-                    <a href={"http://localhost:5173/"} className="ml-7 text-color-10 font-dmsans font-bold text-5xl">
+                    <a href={"http://localhost:5173/"} className="ml-7 text-color-10 font-dmsans font-bold text-5xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-95">
                         Event Organiser
+                    </a>
+                    <a href={"http://localhost:5173/About"} className="ml-96 text-color-10 font-dmsans text-2xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-95">
+                        About
+                    </a>
+                    <a href={"http://localhost:5173/Home"} className="ml-24 text-color-10 font-dmsans text-2xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-95">
+                        Home
+                    </a>
+                    <a href={"http://localhost:5173/Sponsors"} className="ml-24 text-color-10 font-dmsans text-2xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-95">
+                        Sponsors
                     </a>
                 </div>
                 <div className={`absolute top-20 left-0 h-screen w-60 bg-gray-200 transition-all duration-500 ${open ? "translate-x-0" : "-translate-x-full"}`}>
@@ -65,17 +74,17 @@ function MenuBar() {
                         </a>
                         <div className="flex flex-col items-center mt-8">
                             <div
-                                className="w-36 h-32 rounded-md mb-16 relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                                className="w-36 h-32 rounded-md mb-16 relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-95"
                                 style={{ backgroundImage: `url(${ReactImg})` }}
                                 onClick={() => handleTechnologyClick("React")}
                             ></div>
                             <div
-                                className="w-32 h-32 mb-16 rounded-md relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                                className="w-32 h-32 mb-16 rounded-md relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-95"
                                 style={{ backgroundImage: `url(${TypeScript})` }}
                                 onClick={() => handleTechnologyClick("TypeScript")}
                             ></div>
                             <div
-                                className="w-32 h-32 rounded-md relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-105"
+                                className="w-32 h-32 rounded-md relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-95"
                                 style={{ backgroundImage: `url(${Vite})` }}
                                 onClick={() => handleTechnologyClick("Vite")}
                             ></div>

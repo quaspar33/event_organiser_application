@@ -37,16 +37,18 @@ function BackgroundSlider() {
                 key={index}
                 className={`transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`}
                 style={{
-                    position: "absolute", top: 1.5, right: 1.5
+                    position: "absolute",
+                    bottom: "-15rem",
+                    left: "-36rem"
                 }}
             >
-                <h1 className="text-7xl font-bold mb-12 relative z-10 whitespace-nowrap">{TextSlider[index].title}</h1>
-                <p className="text-4xl mb-6 relative z-10">{TextSlider[index].body}</p>
+                <h1 className="text-8xl font-bold mb-12 relative z-10 whitespace-nowrap">{TextSlider[index].title}</h1>
+                <p className="text-6xl mb-6 relative z-10">{TextSlider[index].body}</p>
                 <div className="flex justify-center mt-10">
                     {ImageSlider.map((_, i) => (
                         <StopIcon
                             key={i}
-                            className={`h-6 w-6 mr-2 font-bold transition-opacity ${i === index ? "opacity-100" : "opacity-50"}`}
+                            className={`h-8 w-8 mr-2 font-bold transition-opacity ${i === index ? "opacity-100" : "opacity-50"}`}
                             style={i === index ? { transform: "scale(1.2)" } : undefined}
                         />
                     ))}
