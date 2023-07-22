@@ -42,8 +42,8 @@ function BackgroundSlider() {
                     left: "-36rem"
                 }}
             >
-                <h1 className="text-8xl font-bold mb-12 relative z-10 whitespace-nowrap">{TextSlider[index].title}</h1>
-                <p className="text-6xl mb-6 relative z-10">{TextSlider[index].body}</p>
+                <h1 className="text-8xl font-bold mb-12 relative whitespace-nowrap">{TextSlider[index].title}</h1>
+                <p className="text-6xl mb-6 relative">{TextSlider[index].body}</p>
                 <div className="flex justify-center mt-10">
                     {ImageSlider.map((_, i) => (
                         <StopIcon

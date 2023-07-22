@@ -3,12 +3,15 @@ import { useState } from "react";
 import Vite from "../assets/vite.svg";
 import ReactImg from "../assets/react.svg";
 import TypeScript from "../assets/typescript.svg";
+import Modal from "./Modal.tsx";
 
 function MenuBar() {
-    const [open, setOpen] = useState(false);
+    const [menuBarOpen, setMenuBarOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(false);
+    const closeModal = () => setModalOpen(false);
 
     const handleClick = () => {
-        setOpen(!open);
+        setMenuBarOpen(!menuBarOpen);
     };
 
     const handleTechnologyClick = (technology: string) => {
@@ -31,7 +34,7 @@ function MenuBar() {
         <div className="min-h-screen overflow-hidden">
             <div className="relative">
                 <div className="flex items-center h-20 px-4 bg-color-3">
-                    { open ? (
+                    { menuBarOpen ? (
                         <button className="p-2 rounded-md hover:bg-gray-200 focus:outline-none transition duration-300 ease-in-out transform hover:scale-110" onClick={handleClick}>
                             <ArrowLeftIcon className="h-10 w-10 text-color-10" />
                         </button>
@@ -53,16 +56,19 @@ function MenuBar() {
                         Sponsors
                     </a>
                 </div>
-                <div className={`absolute top-20 left-0 h-screen w-60 bg-gray-200 transition-all duration-500 ${open ? "translate-x-0" : "-translate-x-full"}`}>
+                <div className={`absolute top-20 left-0 h-screen w-60 bg-gray-200 transition-all duration-500 ${menuBarOpen ? "translate-x-0" : "-translate-x-full"}`}>
                     <div className="py-1 flex flex-col items-left" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
-                        <a href={"/login"} className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
+                        <button className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
                             <span>Log In</span>
                             <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10" />
-                        </a>
-                        <a href={"/register"} className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center">
+                        </button>
+                        <button
+                            className="px-4 py-2 rounded-md text-3xl text-color-10 hover:bg-color-3 transition duration-300 ease-in-out transform hover:scale-95 flex justify-between items-center"
+                            onClick={() => (modalOpen ? closeModal() : setModalOpen(true))}
+                        >
                             <span>Register</span>
                             <ArrowTopRightOnSquareIcon className="h-8 w-8 text-color-10" />
-                        </a>
+                        </button>
                         <div className="flex flex-col items-center mt-8">
                             <div
                                 className="w-36 h-32 rounded-md mb-16 relative bg-cover bg-center cursor-pointer transition duration-300 ease-in-out transform hover:scale-95"
@@ -83,6 +89,7 @@ function MenuBar() {
                     </div>
                 </div>
             </div>
+            {modalOpen && <Modal modalOpen={modalOpen} handleClose={closeModal}/>}
         </div>
     );
 }
