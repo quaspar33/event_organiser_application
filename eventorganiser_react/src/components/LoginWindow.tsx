@@ -13,7 +13,9 @@ function LoginWindow({ handleLoginWindowClose }: LoginWindowProps) {
                     Insert your data to register!
                 </a>
             </div>
-            <TextInputs />
+            <div className="w-full">
+                <TextInputs />
+            </div>
             <div className="flex justify-center mt-4">
                 <button
                     className="px-4 py-2 rounded-md text-3xl text-color-10 font-bold hover:text-color-3 hover:bg-color-10 transition duration-300 ease-in-out transform hover:scale-95 flex justify-center"

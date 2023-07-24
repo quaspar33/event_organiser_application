@@ -21,6 +21,7 @@ function TextInputs() {
 
         inputRefs.current.forEach((inputRef) => {
             if (inputRef) {
+                // @ts-ignore
                 inputRef.addEventListener("keydown", handleKeyDown);
             }
         });
@@ -28,6 +29,7 @@ function TextInputs() {
         return () => {
             inputRefs.current.forEach((inputRef) => {
                 if (inputRef) {
+                    // @ts-ignore
                     inputRef.removeEventListener("keydown", handleKeyDown);
                 }
             });
