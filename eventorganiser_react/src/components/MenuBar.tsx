@@ -43,7 +43,7 @@ function MenuBar() {
                             <Bars3Icon className="h-10 w-10 text-color-10" />
                         </button>
                     )}
-                    <a href={"http://localhost:5173/"} className="ml-7 text-color-10 font-dmsans font-bold text-5xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-95">
+                    <a href={"http://localhost:5173/"} className="ml-7 text-color-10 font-dmsans font-bold text-5xl">
                         Event Organiser
                     </a>
                     <a href={"http://localhost:5173/About"} className="ml-96 text-color-10 font-dmsans text-2xl cursor-pointer transition duration-300 ease-in-out transform hover:scale-95">
