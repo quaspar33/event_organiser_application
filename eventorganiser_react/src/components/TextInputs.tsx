@@ -1,6 +1,11 @@
 import { useRef, useEffect } from "react";
+import {CheckIcon} from "@heroicons/react/24/outline";
 
-function TextInputs() {
+interface TextInputsProps {
+    handleClose: () => void;
+}
+
+function TextInputs({ handleClose }: TextInputsProps) {
     const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
 
     useEffect(() => {
@@ -36,6 +41,33 @@ function TextInputs() {
         };
     }, []);
 
+    const handleClick = () => {
+        const formData = {
+            name: inputRefs.current[0]?.value,
+            surname: inputRefs.current[1]?.value,
+            email: inputRefs.current[2]?.value,
+            password: inputRefs.current[3]?.value,
+            description: inputRefs.current[4]?.value,
+        };
+
+        fetch("http://localhost:8080/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                handleClose();
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+            });
+
+    };
+
     return (
         <div className="flex flex-col">
             {["name", "surname", "email", "password", "description"].map((fieldName, index) => (
@@ -48,6 +80,15 @@ function TextInputs() {
                     ref={(el) => (inputRefs.current[index] = el)}
                 />
             ))}
+            <div className="flex justify-center mt-4">
+                <button
+                    className="px-4 py-2 rounded-md text-3xl text-color-10 font-bold hover:text-color-3 hover:bg-color-10 transition duration-300 ease-in-out transform hover:scale-95 flex justify-center"
+                    onClick={handleClick}
+                >
+                    <span>Register</span>
+                    <CheckIcon className="h-8 w-8 ml-4 font-bold" />
+                </button>
+            </div>
         </div>
     );
 }
