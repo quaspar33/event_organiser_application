@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import {CheckIcon} from "@heroicons/react/24/outline";
 
 interface TextInputsProps {
@@ -41,7 +41,8 @@ function TextInputs({ handleClose }: TextInputsProps) {
         };
     }, []);
 
-    const handleClick = () => {
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
         const formData = {
             name: inputRefs.current[0]?.value,
             surname: inputRefs.current[1]?.value,
@@ -56,16 +57,10 @@ function TextInputs({ handleClose }: TextInputsProps) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(formData),
+        }).then(() => {
+            console.log("Dodano nowego użytkownika")
+            handleClose();
         })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                handleClose();
-            })
-            .catch((error) => {
-                console.error("Error:", error);
-            });
-
     };
 
     return (
